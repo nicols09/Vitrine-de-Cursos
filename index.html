@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vitrine de Cursos</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1 id="titulo-catalogo">Vitrine de Cursos</h1>
+    <p>Explore cursos livres, filtre por categoria e acompanhe as turmas disponíveis.</p>
+  </header>
+
+  <main>
+    <section aria-label="Filtros da vitrine" class="controles-filtro">
+      <div>
+        <label for="campo-busca">Buscar curso:</label>
+        <input type="text" id="campo-busca" placeholder="Digite o nome ou assunto (Esc para limpar)">
+      </div>
+
+      <div>
+        <label for="filtro-categoria">Categoria:</label>
+        <select id="filtro-categoria">
+          <option value="Todas">Todas</option>
+          <option value="Negócios">Negócios</option>
+          <option value="Idiomas">Idiomas</option>
+          <option value="Design">Design</option>
+        </select>
+      </div>
+    </section>
+
+    <section aria-label="Estatísticas dos cursos" class="painel-estatisticas">
+      <div class="card-estatistica">
+        <span>Total de cursos:</span>
+        <strong id="stat-total">0</strong>
+      </div>
+
+      <div class="card-estatistica">
+        <span>Matrículas abertas:</span>
+        <strong id="stat-disponiveis">0</strong>
+      </div>
+
+      <div class="card-estatistica">
+        <span>Média de carga horária:</span>
+        <strong id="stat-media">0,00h</strong>
+      </div>
+
+      <div class="card-estatistica">
+        <span>Maior carga horária:</span>
+        <strong id="stat-maior">—</strong>
+      </div>
+    </section>
+
+    <section aria-label="Lista de cursos">
+      <div id="lista-cursos" class="grade-cursos"></div>
+    </section>
+
+    <section aria-label="Cadastrar novo curso" class="secao-cadastro">
+      <h2>Cadastrar Novo Curso</h2>
+      <form id="form-curso" novalidate>
+        <div class="campo-form">
+          <label for="input-nome">Nome do curso:</label>
+          <input type="text" id="input-nome" placeholder="Ex: Introdução à Fotografia">
+        </div>
+
+        <div class="campo-form">
+          <label for="input-categoria">Categoria:</label>
+          <select id="input-categoria">
+            <option value="">Selecione uma categoria...</option>
+            <option value="Negócios">Negócios</option>
+            <option value="Idiomas">Idiomas</option>
+            <option value="Design">Design</option>
+          </select>
+        </div>
+
+        <div class="campo-form">
+          <label for="input-horas">Carga horária:</label>
+          <input type="number" id="input-horas" placeholder="Ex: 20">
+        </div>
+
+        <div class="campo-form">
+          <label for="input-descricao">Descrição:</label>
+          <textarea id="input-descricao" rows="3" placeholder="Descreva o conteúdo do curso..."></textarea>
+        </div>
+
+        <div class="campo-form-checkbox">
+          <input type="checkbox" id="input-disponivel" checked>
+          <label for="input-disponivel">Matrículas abertas (disponível)</label>
+        </div>
+
+        <button type="submit">Cadastrar Curso</button>
+        <p id="mensagem-form" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Projeto de JavaScript — Catálogo Interativo (Vitrine de Cursos)</p>
+  </footer>
+</body>
+</html>
