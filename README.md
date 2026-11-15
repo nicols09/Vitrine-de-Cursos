@@ -1,9 +1,8 @@
 Projeto de JavaScript — Catálogo Interativo (Vitrine de Cursos)
 
 1. Identificação da Dupla e Tema
-Integrante 1: Nícolas dos Anjos Gabriel — RA: 2840482613008
-Integrante 2: Mateus dos Santos Felippe de Oliveira - RA 2840482613042
-Tema registrado: Vitrine de Cursos
+Integrante 1: Nícolas dos Anjos Gabriel 
+Integrante 2: Mateus dos Santos Felippe de Oliveira
 
 2. Mapeamento dos Requisitos no Código (js/app.js)
 - Questão 01 [R1] Dados do catálogo: Array const cursos com 12 objetos literais divididos em 3 categorias (Negócios, Idiomas e Design) e objeto gerenciador const catalogo com os métodos adicionar(item) e contarDisponiveis() usando this.
